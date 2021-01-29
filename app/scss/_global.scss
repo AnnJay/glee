@@ -7,6 +7,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
+
+  @extend %dmsans-400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #676665;
 }
 
 .main {
@@ -35,4 +40,14 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.title {
+  margin-bottom: 25px;
+
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1.3;
+  color:#191919;
+  text-align: center;
 }
