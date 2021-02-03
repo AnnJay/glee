@@ -1,0 +1,42 @@
+.top-info {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    min-height: 170px;
+    background-color: #fef7f0;
+  }
+
+  &__item-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+    }
+  } 
+
+  &__item {
+    display: flex;
+    padding: 15px;
+    max-width: 600px;
+  }
+
+  &__content {
+    margin-top: -2px;
+    margin-left: 25px;
+    max-width: 220px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 4px;
+    @extend %dmsans-700;
+    font-size: 18px;
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+}
