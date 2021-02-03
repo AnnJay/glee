@@ -1,0 +1,14 @@
+.popular {
+  padding: 65px 0 50px;
+
+  &__filter {
+    margin-bottom: 80px;
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+}

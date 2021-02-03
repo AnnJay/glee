@@ -1,0 +1,31 @@
+.filter {
+  display: flex;
+  justify-content: center;
+
+  .mixitup-control-active {
+    color: #191919;
+  }
+
+  &__btn {
+    padding: 0;
+
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline-color: transparent;
+
+    &:hover {
+      color: #191919;
+    }
+
+    &:active {
+      color: $active-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
