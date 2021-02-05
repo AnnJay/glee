@@ -7,5 +7,16 @@ $(function(){
     autoplaySpeed: 4000,
   });
 
-  var mixer = mixitup('.popular__products');
+  var mixer1 = mixitup('.popular__products', {
+    selectors: {
+      control: '.filter-1'
+    }
+  });
+
+  var mixer2 = mixitup('.new-design__inner', {
+    selectors: {
+      control: '.filter-2'
+    }
+  });
+
 });
