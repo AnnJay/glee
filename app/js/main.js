@@ -7,5 +7,26 @@ $(function(){
     autoplaySpeed: 4000,
   });
 
-  var mixer = mixitup('.popular__products');
+  $('.partners__list').slick({
+    arrows: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true
+  });
+
+  var mixer1 = mixitup('.popular__products', {
+    selectors: {
+      control: '.filter-1'
+    }
+  });
+
+  var mixer2 = mixitup('.new-design__inner', {
+    selectors: {
+      control: '.filter-2'
+    }
+  });
+
 });

@@ -1,7 +1,7 @@
 $accent-color: #fcd7b6;
 $active-color: #b22222;
 $title-color: #243f4d;
-$back-color: #a3bbc8;
+$default-color: #a3bbc8;
 
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
@@ -26,4 +26,17 @@ $back-color: #a3bbc8;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
+
+%poppins-700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
 

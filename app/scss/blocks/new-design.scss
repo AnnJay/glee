@@ -1,0 +1,43 @@
+.new-design {
+  padding-bottom: 120px;
+
+  &__filter {
+    margin-bottom: 75px;
+  }
+
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 245px;
+    grid-gap: 35px 30px;
+    min-height: 245px;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    padding: 40px 36px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__item-title {
+    max-width: 180px;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    text-align: left;
+  }
+
+  &__subtitle {
+    max-width: 65px;
+
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
