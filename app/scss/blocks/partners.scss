@@ -1,0 +1,19 @@
+.partners {
+  padding: 255px 0 80px;
+  background-color: #fef7f0;
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-slide {
+    text-align: center;
+  }
+
+  &__item-img {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: none;
+  }
+}

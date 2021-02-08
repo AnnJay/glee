@@ -55,7 +55,7 @@
     font-size: 15px;
     line-height: 0.8;
     color: #ffffff;
-    background-color: $back-color;
+    background-color: $default-color;
     outline-color: #fde7d3;
     transition: transform 0.3s;
 
@@ -67,7 +67,7 @@
       top: 25px;
       right: 18px;
 
-      background-image: url("../images/btn-arrow.svg");
+      background-image: url("../../images/icons/btn-arrow.svg");
       transition: transform 0.3s;
     }
 

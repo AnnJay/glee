@@ -34,7 +34,7 @@
     text-align: center;
   
     @extend %dmsans-700;
-    color: $back-color;
+    color: $default-color;
   }
 
   &__control {
@@ -67,7 +67,7 @@
 
       &:hover,
       &:focus {
-        background-color: $back-color;
+        background-color: $default-color;
 
         path {
           fill: #ffffff;
