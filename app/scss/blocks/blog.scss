@@ -38,7 +38,7 @@
       right: 0;
       top: 4px;
 
-      background-image: url('../../images/icons/link-arrow.svg');
+      background-image: url('../images/icons/link-arrow.svg');
     }
   }
 
@@ -168,13 +168,13 @@
     margin-right: 22px;
 
     &::before {
-      background-image: url('../../images/icons/calendar.svg');
+      background-image: url('../images/icons/calendar.svg');
     }
   }
 
   &__item-author {
     &::before {
-      background-image: url('../../images/icons/user.svg');
+      background-image: url('../images/icons/user.svg');
     }
   }
 }
