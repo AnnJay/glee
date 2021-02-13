@@ -19,13 +19,13 @@ $(function(){
 
   var mixer1 = mixitup('.popular__products', {
     selectors: {
-      control: '.filter-1'
+      control: '.popular .filter__btn'
     }
   });
 
   var mixer2 = mixitup('.new-design__inner', {
     selectors: {
-      control: '.filter-2'
+      control: '.new-design .filter__btn'
     }
   });
 

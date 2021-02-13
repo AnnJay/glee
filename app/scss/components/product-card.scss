@@ -59,6 +59,7 @@
       line-height: 0;
       text-align: center;
       opacity: 0;
+      cursor: pointer;
       transition: opacity 0.4s, background-color 0.4s, transform 0.3s;
       
       &:not(:last-child) {

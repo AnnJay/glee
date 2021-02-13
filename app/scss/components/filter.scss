@@ -6,6 +6,12 @@
     color: #191919;
   }
 
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
   &__btn {
     padding: 0;
 
@@ -22,10 +28,6 @@
 
     &:active {
       color: $active-color;
-    }
-
-    &:not(:last-child) {
-      margin-right: 30px;
     }
   }
 }

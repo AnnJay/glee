@@ -1,12 +1,13 @@
 @import 'global/reset';
-@import 'global/vars';
 @import 'global/fonts';
+@import 'global/vars';
 @import 'global/libs';
 @import 'global/global';
 
 @import 'components/logo';
 @import 'components/filter';
 @import 'components/product-card';
+@import 'components/light-card';
 
 @import 'blocks/header';
 @import 'blocks/top-slider';

@@ -202,13 +202,23 @@
     <section class="popular">
       <div class="container">
         <h2 class="title popular__title">Products of the week</h2>
-        <div class="filter popular__filter">
-          <button class="filter__btn  filter-1" data-filter="all">All</button>
-          <button class="filter__btn  filter-1" data-filter=".furniture">Furnitures</button>
-          <button class="filter__btn  filter-1" data-filter=".chair">Chairs</button>
-          <button class="filter__btn  filter-1" data-filter=".light">Lighting</button>
-          <button class="filter__btn  filter-1" data-filter=".decor">Decor</button>
-        </div>
+        <ul class="filter popular__filter">
+          <li class="filter__item">
+            <button class="filter__btn" data-filter="all">All</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".furniture">Furnitures</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".chair">Chairs</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".light">Lighting</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".decor">Decor</button>
+          </li>
+        </ul>
 
         <div class="popular__products">
           <article class="product-card mix furniture">
@@ -472,34 +482,35 @@
       <div class="popular__light">
         <div class="container container--large">
           <div class="light__inner">
-            <div class="light__item">
-              <img class="light__img" src="images/products/light-1.png" alt="product image">
-              <div class="light__content">
-                <h3 class="light__title">
+            <article class="light-card">
+              <img class="light-card__img" src="images/products/light-1.png" alt="product image">
+              <div class="light-card__content">
+                <h3 class="light-card__title">
                   Mirum Notare Tellus
                 </h3>
-                <p class="light__description">
+                <p class="light-card__description">
                   LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                 </p>
-                <a class="light__link" href="#">
+                <a class="light-card__link" href="#">
                   View More
                 </a>
               </div>
-            </div>
-            <div class="light__item">
-              <img class="light__img" src="images/products/light-2.png" alt="product image">
-              <div class="light__content">
-                <h3 class="light__title">
+            </article>
+
+            <article class="light-card">
+              <img class="light-card__img" src="images/products/light-2.png" alt="product image">
+              <div class="light-card__content">
+                <h3 class="light-card__title">
                   Malesuada Tempor Euismod
                 </h3>
-                <p class="light__description">
+                <p class="light-card__description">
                   50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
                 </p>
-                <a class="light__link" href="#">
+                <a class="light-card__link" href="#">
                   View More
                 </a>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
@@ -508,56 +519,78 @@
     <section class="new-design">
       <div class="container">
         <h2 class="title new-design__title">New Design</h2>
-        <div class="filter new-design__filter">
-          <button class="filter__btn filter-2" data-filter="all">All</button>
-          <button class="filter__btn filter-2" data-filter=".furniture">Furnitures</button>
-          <button class="filter__btn filter-2" data-filter=".chair">Chairs</button>
-          <button class="filter__btn filter-2" data-filter=".light">Lighting</button>
-          <button class="filter__btn filter-2" data-filter=".decor">Decor</button>
-        </div>
+
+        <ul class="filter new-design__filter">
+          <li class="filter__item">
+            <button class="filter__btn" data-filter="all">All</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".furniture">Furnitures</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".chair">Chairs</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".light">Lighting</button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn" data-filter=".decor">Decor</button>
+          </li>
+        </ul>
+
         <div class="new-design__inner">
-          <article class="new-design__item mix decor" style="background-image: url('images/products/design-bg-1.jpg');">
+          <article class="new-design__item mix decor">
             <h3 class="title new-design__item-title">
               Beat Flat Pendant Black
             </h3>
             <span class="new-design__subtitle">Classic</span>
+            <img class="new-design__img" src="images/products/design-1.jpg" alt="product image">
+            <a class="new-design__link" href="#"></a>
           </article>
 
-          <article class="new-design__item mix furniture"
-            style="background-image: url('images/products/design-bg-2.jpg');">
+          <article class="new-design__item mix furniture">
             <h3 class="title new-design__item-title">
               Lampe Sur Pieds Bamboo
             </h3>
             <span class="new-design__subtitle">Classic</span>
+            <img class="new-design__img" src="images/products/design-2.jpg" alt="product image">
+            <a class="new-design__link" href="#"></a>
           </article>
 
-          <article class="new-design__item mix chair" style="background-image: url('images/products/design-bg-3.jpg');">
+          <article class="new-design__item mix chair">
             <h3 class="title new-design__item-title">
               Rattan Rocking Chair
             </h3>
             <span class="new-design__subtitle">Classic</span>
+            <img class="new-design__img" src="images/products/design-3.jpg" alt="product image">
+            <a class="new-design__link" href="#"></a>
           </article>
 
-          <article class="new-design__item mix furniture"
-            style="background-image: url('images/products/design-bg-4.jpg');">
+          <article class="new-design__item mix furniture">
             <h3 class="title new-design__item-title">
               Rattan Rocking Chair
             </h3>
             <span class="new-design__subtitle">Classic</span>
+            <img class="new-design__img" src="images/products/design-4.jpg" alt="product image">
+            <a class="new-design__link" href="#"></a>
           </article>
 
-          <article class="new-design__item mix chair" style="background-image: url('images/products/design-bg-5.jpg');">
+          <article class="new-design__item mix chair">
             <h3 class="title new-design__item-title">
               Rattan Rocking Chair
             </h3>
             <span class="new-design__subtitle">Classic</span>
+            <img class="new-design__img" src="images/products/design-5.jpg" alt="product image">
+            <a class="new-design__link" href="#"></a>
           </article>
 
-          <article class="new-design__item mix decor" style="background-image: url('images/products/design-bg-6.jpg');">
+          <article class="new-design__item mix decor">
             <h3 class="title new-design__item-title">
               Lampe Sur Pieds Bamboo
             </h3>
             <span class="new-design__subtitle">Classic</span>
+            <img class="new-design__img" src="images/products/design-6.jpg" alt="product image">
+            <a class="new-design__link" href="#"></a>
           </article>
         </div>
       </div>
@@ -586,13 +619,15 @@
         </div>
 
         <div class="blog__items">
-          <div class="blog__item blog__item--news">
+          <div class="blog__item">
             <a class="blog__link-img" href="#">
               <img class="blog__item-img" src="images/blog/1.jpg" alt="blog image">
             </a>
             <div class="blog__item-links">
-              <a class="blog__item-description" href="#">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              <a class="blog__item-titlelink" href="#">
+                <h3 class="blog__item-title">
+                  Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                </h3>
               </a>
               <div class="blog__item-info">
                 <a class="blog__item-date" href="#">
@@ -603,15 +638,18 @@
                 </a>
               </div>
             </div>
+            <span class="blog__category">News</span>
           </div>
 
-          <div class="blog__item blog__item--news">
+          <div class="blog__item">
             <a class="blog__link-img" href="#">
               <img class="blog__item-img" src="images/blog/2.jpg" alt="blog image">
             </a>
             <div class="blog__item-links">
-              <a class="blog__item-description" href="#">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              <a class="blog__item-titlelink" href="#">
+                <h3 class="blog__item-title">
+                  Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                </h3>
               </a>
               <div class="blog__item-info">
                 <a class="blog__item-date" href="#">
@@ -622,16 +660,18 @@
                 </a>
               </div>
             </div>
-
+            <span class="blog__category">News</span>
           </div>
 
-          <div class="blog__item blog__item--news">
+          <div class="blog__item">
             <a class="blog__link-img" href="#">
               <img class="blog__item-img" src="images/blog/3.jpg" alt="blog image">
             </a>
             <div class="blog__item-links">
-              <a class="blog__item-description" href="#">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
+              <a class="blog__item-titlelink" href="#">
+                <h3 class="blog__item-title">
+                  Rncididunt ut labore et dolore magna aliqua. Ut enim
+                </h3>
               </a>
               <div class="blog__item-info">
                 <a class="blog__item-date" href="#">
@@ -642,6 +682,7 @@
                 </a>
               </div>
             </div>
+            <span class="blog__category">News</span>
           </div>
 
         </div>
@@ -662,13 +703,13 @@
           <img class="partners__item-img" src="images/logo-partners/5.png" alt="partner logo">
 
           <img class="partners__item-img" src="images/logo-partners/1.png" alt="partner logo">
-          
+
           <img class="partners__item-img" src="images/logo-partners/2.png" alt="partner logo">
-          
+
           <img class="partners__item-img" src="images/logo-partners/3.png" alt="partner logo">
-          
+
           <img class="partners__item-img" src="images/logo-partners/4.png" alt="partner logo">
-          
+
           <img class="partners__item-img" src="images/logo-partners/5.png" alt="partner logo">
 
         </div>
