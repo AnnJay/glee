@@ -17,11 +17,16 @@
     margin-top: 9px;
     position: relative;
     padding-right: 25px;
+
     color: #262626;
     font-weight: 700;
-    transition: opacity 0.4s, transform 0.4s;
+    border-bottom: 1px solid transparent;
+    transition: opacity 0.4s, transform 0.4s, border-color 0.4s;
 
-    &:hover,
+    &:hover {
+      border-color: #222933;
+    }
+
     &:focus {
       opacity: 0.8;
     }
@@ -92,7 +97,10 @@
     margin-bottom: 11px;
     color: #262626;
 
-    &:hover,
+    &:hover {
+      color: $default-color;
+    }
+
     &:focus {
       opacity: 0.8;
     }
@@ -111,6 +119,7 @@
     -webkit-box-orient: vertical; 
     -webkit-line-clamp: 3; 
     overflow: hidden;
+    transition: color 0.3s;
   }
 
   &__item-info {
