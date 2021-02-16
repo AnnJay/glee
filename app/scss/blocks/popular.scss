@@ -1,8 +1,26 @@
 .popular {
   padding: 65px 0 100px;
 
+  @media (max-width: $lg) {
+    padding: 50px 0 70px;
+  }
+
+  &__title {
+    @media (max-width: $xs) {
+      line-height: 1;
+    }
+  }
+
   &__filter {
     margin-bottom: 80px;
+
+    @media (max-width: $lg) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $md) {
+      margin-bottom: 25px;
+    }
   }
 
   &__products {
@@ -12,15 +30,41 @@
     column-gap: 30px;
     row-gap: 40px;
     min-height: 380px;
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 30px;
+      min-height: auto;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $xs) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      
+    }
   }
 
   &__light {
     padding-top: 105px;
+
+    @media (max-width: $md) {
+      padding-top: 20px;
+    }
   }
 
   .light {
     &__inner {
       display: flex;
+      justify-content: space-between;
+
+      @media (max-width: $lg) {
+        display: block;
+      }
     }
   }
 }

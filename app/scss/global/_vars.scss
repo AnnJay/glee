@@ -3,6 +3,13 @@ $active-color: #b22222;
 $title-color: #243f4d;
 $default-color: #a3bbc8;
 
+//media queries
+
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 576px;
+
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
   font-weight: 400;

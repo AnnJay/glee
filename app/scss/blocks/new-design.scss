@@ -12,8 +12,8 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 246px;
-    grid-gap: 35px 30px;
+    column-gap: 30px;
+    row-gap: 35px;
     min-height: 246px;
   }
 

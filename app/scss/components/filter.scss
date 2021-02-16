@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: $xs) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .mixitup-control-active {
     color: #191919;
   }
@@ -9,6 +14,13 @@
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+    }
+    
+    @media (max-width: $xs) {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
   }
 
