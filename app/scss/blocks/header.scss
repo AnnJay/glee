@@ -1,15 +1,45 @@
 .header {
-  padding: 46px 0;
+  padding: 46px 10px;
+
+  @media (max-width: $lg) {
+    padding: 30px 10px;
+  }
+
+  @media (max-width: $md) {
+    padding: 20px 10px;
+  }
+
+  &__logo {
+    @media (max-width: $md) {
+      margin-left: 60px;
+      position: relative;
+      z-index: 5;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: auto;
+    }
+  }
 
   &__navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
   }
 
   &__control {
     display: flex;
     margin-top: 3px;
+    z-index: 5;
+
+    @media (max-width: $xs) {
+      margin-left: auto;
+      margin-top: 15px;
+    }
   }
 
   &__link,
@@ -39,14 +69,18 @@
 
     &--search {
       padding: 17px;
+      margin-right: 20px;
       background-color: #edf1f4;
       border-radius: 50%;
       border: none;
+
+      @media (max-width: $lg) {
+        margin-right: 10px;
+      }
     }
 
     &--tile {
       padding: 15px;
-      margin-left: 20px;
 
       background-color: $default-color;
       border-radius: 50%;
@@ -61,10 +95,14 @@
   &__control-group {
     display: flex;
     max-height: 50px;
-    margin-left: 20px;
+    margin-right: 20px;
 
     background-color: $accent-color;
     border-radius: 25px;
+
+    @media (max-width: $lg) {
+      margin-right: 10px;
+    }
   }
 
   &__link {
@@ -125,6 +163,21 @@
     svg {
       margin-top: 20px;
     }
+
+    @media (max-width: $xs) {
+      min-width: 50px;
+
+      &:first-child,
+      &:last-child {
+        min-width: 70px;
+      }
+
+      &:first-child {
+        .header__num {
+          left: 48px;
+        }
+      }
+    }
   }
 
   &__num {
@@ -143,17 +196,152 @@
     background-color: #ffffff;
     border-radius: 50%;
     transition: background-color 0.4s, color 0.4s;
+
+    @media (max-width: $xs) {
+      left: 30px;
+    }
+  }
+}
+
+ul.menu__list {
+  @media (max-width: $md) {
+    padding-top: 96px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 100px 0 20px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 160px 0 20px;
   }
 }
 
 .menu {
-  margin-left: 148px;
-  margin-top: -3px;
-  display: flex;
+  &.menu--active {
+    .menu__btn-line:nth-child(1),
+    .menu__btn-line:nth-child(3) {
+      width: 15px;
+    }
+
+    .menu__btn-line:nth-child(1) {
+      margin-bottom: -4px;
+      transform: translateX(-14px) rotate(-45deg);
+    }
+
+    .menu__btn-line:nth-child(3) {
+      margin-top: -4px;
+      transform: translateX(-14px) rotate(45deg);
+    }
+
+    .menu__list {
+      transform: translateX(0);
+    }
+  }
+
+
+  &__btn {
+    display: none;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline-color: transparent;
+
+    @media (max-width: $md) {
+      display: block;
+      position: absolute;
+      top: 35px;
+      left: 10px;
+      z-index: 5;
+    }
+
+    @media (max-width: $xs) {
+      top: 25px;
+    }
+  }
+
+  &__btn-line {
+    width: 40px;
+    height: 4px;
+    background-color: #436372;
+    display: block;
+    margin: 6px auto;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__list {
+    margin-left: 148px;
+    margin-top: -3px;
+    display: flex;
+  
+    @media (max-width: $lg) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $md) {
+      display: block;
+      position: absolute;
+      width: 250px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+
+      background-color: #fff;
+      transform: translateX(-200%);
+      transition: transform 0.6s;
+    }
+
+    @media (max-width: $sm) {
+      right: 0;
+      bottom: auto;
+      width: 100%;
+      max-height: 100%;
+
+      overflow-y: auto;
+      clip: rect(95px, auto, auto, auto);
+    }
+
+    @media (max-width: $xs) {
+      clip: rect(147px, auto, auto, auto);
+    }
+  }
   
   &__item {
     &:not(:last-child) {
       margin-right: 35px;
+    }
+
+    @media (max-width: $lg) {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: $md) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      border: 1px solid transparent;
+      border-left-width: 4px;
+      transition: border-color 0.4s;
+
+      &.menu__item--active {
+        border-color: #436372;
+      }
+    }
+
+    @media (max-width: $sm) {
+      border: none;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      text-align: center;
+
+      &.menu__item--active {
+        border-color: #436372;
+      }
     }
   }
 
@@ -179,6 +367,11 @@
 
     &:active {
       color: $active-color;
+    }
+
+    @media (max-width: $md) {
+      display: block;
+      padding: 20px;
     }
   }
 }

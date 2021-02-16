@@ -15,6 +15,24 @@
       top: 100px;
       right: 162px;
     }
+
+    @media (max-width: $lg) {
+      min-height: auto;
+      padding: 150px 0 40px;
+
+      &::before {
+        top: 20px;
+        right: 20px;
+      }
+    }
+
+    @media (max-width: $md) {
+      padding: 60px 0 40px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 40px 0 20px;
+    }
   }
 
   &__item {
@@ -22,6 +40,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $lg) {
+      padding: 0 0 120px 3px;
+    }
+
+    @media (max-width: $md) {
+      display: block;
+      padding: 0 0 40px 3px;
+    }
+  }
+
+  &__content {
+    @media (max-width: $md) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $xs) {
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
@@ -34,6 +71,16 @@
     line-height: 1;
     text-transform: uppercase;
     color: $title-color;
+
+    @media (max-width: $md) {
+      max-width: 550px;
+      margin-bottom: 10px;
+      font-size: 50px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -44,6 +91,15 @@
     color: #436372;
     font-size: 18px;
     line-height: 1.67;
+
+    @media (max-width: $md) {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
   }
 
   &__link {
@@ -80,12 +136,39 @@
     &:active {
       transform: scale(0.95);
     }
+
+    @media (max-width: $md) {
+      padding: 24px 80px 23px 25px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 15px 50px 15px 15px;  
+      
+      &::before {
+        top: 17px;
+      }
+    }
   }
 
   &__img {
     max-width: 640px;
     max-height: 600px;
     object-fit: contain;
+
+    @media (max-width: $lg) {
+      max-width: 500px;
+      max-height: 400px;
+    }
+
+    @media (max-width: $md) {
+      margin-right: 20px;
+      margin-left: auto;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 300px;
+      max-height: 250px;
+    }
   }
 
   .slick-dots {

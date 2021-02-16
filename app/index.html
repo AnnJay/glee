@@ -13,30 +13,39 @@
   <header class="header">
     <div class="container container--large">
       <nav class="header__navigation">
-        <a class="logo" href="#">
+        <a class="logo header__logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="site logo">
         </a>
 
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link" href="#">Home +</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">About</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Services</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Pages +</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">News</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Contact</a>
-          </li>
-        </ul>
+        <div class="menu">
+          <button class="menu__btn">
+            <span class="menu__btn-line"></span>
+            <span class="menu__btn-line"></span>
+            <span class="menu__btn-line"></span>
+            <span class="sr-only">Show the hidden menu</span>
+          </button>
+
+          <ul class="menu__list">
+            <li class="menu__item menu__item--active">
+              <a class="menu__link" href="#">Home +</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Services</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Pages +</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">News</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
 
         <div class="header__control">
           <button class="header__btn header__btn--search">
@@ -78,8 +87,8 @@
       </nav>
     </div>
   </header>
-
   <main class="main">
+
     <h1 class="sr-only">Shop of smart and trendy furniture</h1>
     <section class="top-slider">
       <div class="container container--large">
@@ -141,6 +150,8 @@
         </div>
       </div>
     </section>
+    <!-- 
+
 
     <div class="top-info">
       <div class="container container--large">
@@ -716,10 +727,11 @@
       </div>
     </div>
 
+  -->
   </main>
 
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div class="footer__contacts">
@@ -810,7 +822,7 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="js/main.min.js"></script>
 </body>
