@@ -8,14 +8,16 @@ $(function(){
     $('.menu__item').removeClass('menu__item--active');
     $(this).addClass('menu__item--active');
   });
-  
-  
+
+  $(window).on('scroll', function(){
+    $('.header').toggleClass('header--scroll', $(this).scrollTop() > 100);
+  });
 
   $('.top-slider__inner').slick({
     arrows: false,
     dots: true,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000
   });
 
@@ -26,7 +28,28 @@ $(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: true
+    pauseOnHover: true,
+
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   });
 
   var mixer1 = mixitup('.popular__products', {

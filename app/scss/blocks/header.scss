@@ -1,12 +1,30 @@
 .header {
   padding: 46px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 113px;
+
+  background-color: #ffffff;
+  z-index: 10;
 
   @media (max-width: $lg) {
+    height: 113px;
     padding: 30px 10px;
   }
 
   @media (max-width: $md) {
+    height: 93px;
     padding: 20px 10px;
+  }
+
+  @media (max-width: $xs) {
+    height: 144px;
+  }
+
+  &--scroll {
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.4);
   }
 
   &__logo {
@@ -282,7 +300,7 @@ ul.menu__list {
 
     @media (max-width: $md) {
       display: block;
-      position: absolute;
+      position: fixed;
       width: 250px;
       top: 0;
       left: 0;
@@ -292,6 +310,7 @@ ul.menu__list {
       background-color: #fff;
       transform: translateX(-200%);
       transition: transform 0.6s;
+      box-shadow: inset 0px 0px 4px 0px rgba(37, 37, 37, 0.4);
     }
 
     @media (max-width: $sm) {
@@ -302,6 +321,7 @@ ul.menu__list {
 
       overflow-y: auto;
       clip: rect(95px, auto, auto, auto);
+      box-shadow: inset 0px 0px 4px 0px rgba(37, 37, 37, 0.4);
     }
 
     @media (max-width: $xs) {

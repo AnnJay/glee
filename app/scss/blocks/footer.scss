@@ -3,6 +3,19 @@
     display: flex;
     padding: 80px 0 60px;
     border-bottom: 1px solid #dae4e9;
+
+    @media (max-width: $lg) {
+      justify-content: space-between;
+      padding: 50px 0 30px;
+    }
+
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: $xs) {
+      padding: 40px 0 20px;
+    }
   }
 
   a, p {
@@ -21,6 +34,20 @@
   &__contacts {
     width: 200px;
     margin-right: 100px;
+    
+    @media (max-width: $lg) {
+      margin-right: auto;
+    }
+
+    @media (max-width: $md) {
+      order: -2;
+      width: 45%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
 
   &__address-link {
@@ -53,6 +80,15 @@
     max-width: 200px;
     width: 100%;
     margin-right: 100px;
+
+    @media (max-width: $lg) {
+      margin-right: auto;
+    }
+
+    @media (max-width: $md) {
+      margin: 10px 0 0 0;
+      max-width: 45%;
+    }
   }
 
   &__item-title {
@@ -64,6 +100,10 @@
     font-size: 16px;
     text-transform: uppercase;
     color: #1f2044;
+
+    @media (max-width: $xs) {
+      margin-bottom: 10px;
+    }
   }
 
   &__list-item {
@@ -71,7 +111,18 @@
   }
 
   &__form {
-    max-width: 270px;
+    min-width: 270px;
+    min-width: 270px;
+
+    @media (max-width: $md) {
+      order: -1;
+      width: 45%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
 
   &__form-email {
@@ -80,6 +131,10 @@
 
   &__form-text {
     margin-bottom: 33px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 15px;
+    }
   }
 
   &__input {
@@ -139,10 +194,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 33px 0;
+
+    @media (max-width: $lg) {
+      padding: 20px 0;
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding: 10px 0;
+    }
   }
 
   &__menu {
     display: flex;
+
+    @media (max-width: $xs) {
+      margin-bottom: 10px;
+    }
   }
 
   &__menu-item {
