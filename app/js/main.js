@@ -4,9 +4,9 @@ $(function(){
     $('.menu').toggleClass('menu--active');
   });
 
-  $('.menu__item').on('click', function(){
-    $('.menu__item').removeClass('menu__item--active');
-    $(this).addClass('menu__item--active');
+  $('.menu__link').on('click', function(){
+    $('.menu__link').removeClass('menu__link--active');
+    $(this).addClass('menu__link--active');
   });
 
   $(window).on('scroll', function(){
