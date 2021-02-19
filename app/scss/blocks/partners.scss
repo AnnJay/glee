@@ -2,6 +2,14 @@
   padding: 255px 0 80px;
   background-color: #fef7f0;
 
+  @media (max-width: $md) {
+    padding: 220px 0 40px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 35px;
+  }
+
   .slick-track {
     display: flex;
     align-items: center;
@@ -15,5 +23,11 @@
     max-width: 200px;
     max-height: 100px;
     object-fit: none;
+
+    @media (max-width: $sm) {
+      max-width: 100px;
+      max-height: 50px;
+      object-fit: contain;
+    }
   }
 }

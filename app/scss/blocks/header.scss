@@ -1,12 +1,31 @@
 .header {
   padding: 46px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 113px;
+
+  background-color: #ffffff;
+  z-index: 10;
 
   @media (max-width: $lg) {
+    height: 113px;
     padding: 30px 10px;
   }
 
   @media (max-width: $md) {
+    height: 93px;
     padding: 20px 10px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 8px 10px;
+    height: 115px;
+  }
+
+  &--scroll {
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.4);
   }
 
   &__logo {
@@ -38,7 +57,7 @@
 
     @media (max-width: $xs) {
       margin-left: auto;
-      margin-top: 15px;
+      margin-top: 10px;
     }
   }
 
@@ -213,7 +232,7 @@ ul.menu__list {
   }
 
   @media (max-width: $xs) {
-    padding: 160px 0 20px;
+    padding: 120px 0 20px;
   }
 }
 
@@ -257,7 +276,7 @@ ul.menu__list {
     }
 
     @media (max-width: $xs) {
-      top: 25px;
+      top: 10px;
     }
   }
 
@@ -282,7 +301,7 @@ ul.menu__list {
 
     @media (max-width: $md) {
       display: block;
-      position: absolute;
+      position: fixed;
       width: 250px;
       top: 0;
       left: 0;
@@ -292,6 +311,7 @@ ul.menu__list {
       background-color: #fff;
       transform: translateX(-200%);
       transition: transform 0.6s;
+      box-shadow: inset 0px 0px 4px 0px rgba(37, 37, 37, 0.4);
     }
 
     @media (max-width: $sm) {
@@ -300,12 +320,13 @@ ul.menu__list {
       width: 100%;
       max-height: 100%;
 
-      overflow-y: auto;
+      box-shadow: inset 0px 0px 4px 0px rgba(37, 37, 37, 0.4);
       clip: rect(95px, auto, auto, auto);
+      overflow-y: auto;
     }
 
     @media (max-width: $xs) {
-      clip: rect(147px, auto, auto, auto);
+      clip: rect(117px, auto, auto, auto);
     }
   }
   
@@ -324,34 +345,16 @@ ul.menu__list {
       &:not(:last-child) {
         margin-right: 0;
       }
-      border: 1px solid transparent;
-      border-left-width: 4px;
-      transition: border-color 0.4s;
-
-      &.menu__item--active {
-        border-color: #436372;
-      }
-    }
-
-    @media (max-width: $sm) {
-      border: none;
-      border-top: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      text-align: center;
-
-      &.menu__item--active {
-        border-color: #436372;
-      }
-    }
+    }  
   }
 
   &__link {
     padding-bottom: 2px;
 
     @extend %rubik-500;
+    color: #436372;
     font-size: 15px;
     line-height: 0.8;
-    color: #436372;
 
     border-bottom: 1px solid transparent;
     transition: color 0.4s, border-color 0.4s;
@@ -360,7 +363,8 @@ ul.menu__list {
       color: $accent-color;
     }
     
-    &:focus {
+    &:focus,
+    &--active {
       color: $accent-color;
       border-bottom-color: $accent-color; 
     }
@@ -372,6 +376,24 @@ ul.menu__list {
     @media (max-width: $md) {
       display: block;
       padding: 20px;
+
+      border: 1px solid transparent;
+      border-left-width: 4px;
+
+      &.menu__link--active {
+        border-color: #436372;
+      }
+    }
+
+    @media (max-width: $sm) {
+      border: none;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      text-align: center;
+
+      &.menu__link--active {
+        border-color: #436372;
+      }
     }
   }
 }

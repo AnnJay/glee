@@ -1,4 +1,18 @@
 .top-slider {
+  margin-top: 145px;
+
+  @media (max-width: $lg) {
+    margin-top: 113px;
+  }
+
+  @media (max-width: $md) {
+    margin-top: 93px;
+  }
+
+  @media (max-width: $xs) {
+    margin-top: 115px;
+  }
+
   &__container {
     min-height: 820px;
     position: relative;
