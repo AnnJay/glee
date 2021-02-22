@@ -11,19 +11,22 @@
   @media (max-width: $lg) {
     max-width: 100%;
     padding: 75px 20px 40px 20px;
-
-    &:not(:last-child) {
-      margin-bottom: 130px;
-    }
   }
 
   @media (max-width: $md) {
     padding: 25px;
+  }
 
-    &:not(:last-child) {
+  &:not(:last-child) {
+    @media (max-width: $lg) {
+      margin-bottom: 130px;
+    }
+
+    @media (max-width: $md) {
       margin-bottom: 30px;
     }
   }
+
 
   &__img {
     max-width: 235px;
@@ -94,6 +97,10 @@
     outline-color: transparent;
     transition: transform 0.3s;
 
+    @media (max-width: $xs) {
+      padding: 10px 40px 10px 5px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -104,6 +111,11 @@
 
       background-image: url("../images/icons/btn-arrow-grey.svg");
       transition: transform 0.3s;
+
+      @media (max-width: $xs) {
+        top: 12px;
+        right: 7px;
+      }
     }
 
     &:hover {
@@ -114,15 +126,6 @@
 
     &:active {
       transform: scale(0.95);
-    }
-
-    @media (max-width: $xs) {
-      padding: 10px 40px 10px 5px;
-
-      &::before {
-        top: 12px;
-        right: 7px;
-      }
     }
   }
 }

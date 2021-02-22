@@ -22,10 +22,8 @@
 
     &:not(:last-child) {
       border-right: 1px solid #e8e4df;
-    }
 
-    @media (max-width: $md) {
-      &:not(:last-child) {
+      @media (max-width: $md) {
         border-right: none;
         border-bottom: 1px solid #e8e4df;
       }

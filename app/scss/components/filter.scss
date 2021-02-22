@@ -14,10 +14,8 @@
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
-    }
-    
-    @media (max-width: $xs) {
-      &:not(:last-child) {
+
+      @media (max-width: $xs) {
         margin-right: 0;
         margin-bottom: 10px;
       }
