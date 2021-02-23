@@ -1,0 +1,27 @@
+.top {
+  margin-top: 145px;
+  padding: 33px 0;
+  background-color: #edf1f4;
+  text-align: center;
+
+  @media (max-width: $lg) {
+    margin-top: 113px;
+  }
+
+  @media (max-width: $md) {
+    margin-top: 93px;
+  }
+
+  @media (max-width: $xs) {
+    margin-top: 115px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 0.7;
+    color: #222933;
+  }
+}
