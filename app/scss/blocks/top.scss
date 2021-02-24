@@ -12,8 +12,13 @@
     margin-top: 93px;
   }
 
+  @media (max-width: $sm) {
+    padding: 20px 0;
+  }
+
   @media (max-width: $xs) {
     margin-top: 115px;
+    padding: 10px 0;
   }
 
   &__title {
@@ -23,5 +28,9 @@
     font-size: 36px;
     line-height: 0.7;
     color: #222933;
+
+    @media (max-width: $xs) {
+      font-size: 25px;
+    }
   }
 }
