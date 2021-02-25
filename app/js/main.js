@@ -1,6 +1,14 @@
 $(function(){
 
-  $('.stars').rateYo({
+  $('.product-card .stars').rateYo({
+    starWidth: "19px",
+    readOnly: true,
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    spacing: "12px"
+  });
+
+  $('.filter-links .stars').rateYo({
     starWidth: "12px",
     readOnly: true,
     ratedFill: "#ffcc00",

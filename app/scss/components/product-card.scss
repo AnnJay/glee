@@ -59,6 +59,14 @@
     transform: translateX(-50%);
   }
 
+  .stars {
+    display: none;
+  }
+
+  &__text {
+    display: none;
+  }
+
   .control {
     &__item {
       width: 46px;
@@ -83,11 +91,30 @@
         margin-right: 16px;
       }
 
+      .icon {
+        fill: #a3bbc8;
+      }
+
+      .search-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .cart-icon {
+        width: 22px;
+        height: 20px;      
+      }
+
+      .heart-icon {
+        width: 22px;
+        height: 18px;
+      }
+
       &:hover,
       &:focus {
         background-color: $default-color;
 
-        path {
+        .icon {
           fill: #ffffff;
         }
       }
