@@ -1,0 +1,47 @@
+.filter-brand {
+  margin-top: 80px;
+
+  .products__filter-title {
+    margin-bottom: 27px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 2px;
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked {
+      & + .filter-brand__checkbox {
+        background-color: #edf1f4;
+      }
+
+      & + .filter-brand__checkbox > .filter-brand__num {
+        color: $title-color;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 15px;
+
+    @extend %rubik-400;
+    color: $title-color;
+    border-radius: 5px;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__num {
+    color: #b3b3b3;
+  }
+}
+
