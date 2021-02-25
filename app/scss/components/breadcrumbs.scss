@@ -1,0 +1,33 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+    @extend %rubik-400;
+    color: #979ba0;
+
+    &:not(:last-child) {
+      margin-right: 18px;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        top: 4px;
+        right: -13px;
+      }
+    }
+
+    &:last-child {
+      color: $active-color;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    line-height: 1.7;
+  }
+}

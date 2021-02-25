@@ -129,6 +129,10 @@
     text-align: center;
     min-width: 70px;
 
+    @media (max-width: $xs) {
+      min-width: 50px;
+    } 
+
     &:not(:last-child) {
       &::after {
         content: "";
@@ -145,6 +149,10 @@
     &:first-child,
     &:last-child {
       min-width: 90px;
+
+      @media (max-width: $xs) {
+        min-width: 70px;
+      }
     }
 
     &:first-child {
@@ -152,6 +160,12 @@
 
       .header__num {
         left: 58px;
+      }
+
+      @media (max-width: $xs) {
+        .header__num {
+          left: 48px;
+        }
       }
     }
 
@@ -181,21 +195,6 @@
 
     svg {
       margin-top: 20px;
-    }
-
-    @media (max-width: $xs) {
-      min-width: 50px;
-
-      &:first-child,
-      &:last-child {
-        min-width: 70px;
-      }
-
-      &:first-child {
-        .header__num {
-          left: 48px;
-        }
-      }
     }
   }
 
@@ -333,19 +332,15 @@ ul.menu__list {
   &__item {
     &:not(:last-child) {
       margin-right: 35px;
-    }
 
-    @media (max-width: $lg) {
-      &:not(:last-child) {
+      @media (max-width: $lg) {
         margin-right: 20px;
       }
-    }
 
-    @media (max-width: $md) {
-      &:not(:last-child) {
+      @media (max-width: $md) {
         margin-right: 0;
       }
-    }  
+    } 
   }
 
   &__link {
@@ -358,20 +353,6 @@ ul.menu__list {
 
     border-bottom: 1px solid transparent;
     transition: color 0.4s, border-color 0.4s;
-
-    &:hover {
-      color: $accent-color;
-    }
-    
-    &:focus,
-    &--active {
-      color: $accent-color;
-      border-bottom-color: $accent-color; 
-    }
-
-    &:active {
-      color: $active-color;
-    }
 
     @media (max-width: $md) {
       display: block;
@@ -395,5 +376,20 @@ ul.menu__list {
         border-color: #436372;
       }
     }
+    
+    &:hover {
+      color: $accent-color;
+    }
+    
+    &:focus,
+    &--active {
+      color: $accent-color;
+      border-bottom-color: $accent-color; 
+    }
+
+    &:active {
+      color: $active-color;
+    }
+
   }
 }

@@ -1,5 +1,35 @@
 $(function(){
 
+  $('.product-card .stars').rateYo({
+    starWidth: "19px",
+    readOnly: true,
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    spacing: "12px"
+  });
+
+  $('.filter-links .stars').rateYo({
+    starWidth: "12px",
+    readOnly: true,
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    spacing: "5px"
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    step: "0.01",
+    onStart: function (data) {
+      $('.filter-price__from').text('$' + data.from.toFixed(2));
+      $('.filter-price__to').text('$' + data.to.toFixed(2));
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text('$' + data.from.toFixed(2));
+      $('.filter-price__to').text('$' + data.to.toFixed(2));
+    }
+  });
+
   $('.menu__btn, .menu__link').on('click', function(){
     $('.menu').toggleClass('menu--active');
   });
