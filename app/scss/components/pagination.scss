@@ -1,0 +1,44 @@
+.pagination {
+  display: flex;
+
+  &__list {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__list-link,
+  &__item--next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+
+    @extend %rubik-400;
+    color: $title-color;
+    text-transform: uppercase;
+    border: 1px solid $default-color;
+    transition: color 0.3s, backgound-color 0.4s;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $default-color;
+    }
+  }
+
+  &__list-link--active {
+    color: #ffffff;
+    background-color: $default-color;
+  }
+
+  &__item--next {
+    width: auto;
+    padding: 0 18px;
+  }
+}
